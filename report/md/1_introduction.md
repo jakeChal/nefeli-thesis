@@ -1,4 +1,4 @@
-# Einleitung
+# Introduction
 
 <!--
 *   Worum geht es hier? Was ist das betrachtete Problem bzw. die Fragestellung der Arbeit?
@@ -11,7 +11,7 @@ Umfang: typisch ca. 8% ... 10% der Arbeit
 -->
 
 
-## Markdown und -Erweiterungen durch Pandoc
+## Markdown und Erweiterungen durch Pandoc
 
 Für eine Einführung in (Pandoc-) Markdown vgl. [pandoc.org/MANUAL.html](https://pandoc.org/MANUAL.html).
 

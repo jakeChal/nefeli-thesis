@@ -1,4 +1,4 @@
-# Stand der Technik/Forschung, vergleichbare Arbeiten
+# State of the Art & Related Work
 
 <!--
 *   Darstellung relevanter Ansätze aus der Praxis bzw. Forschung

@@ -20,11 +20,11 @@ PANDOC                 ?= docker run --rm -v "$(WORKDIR):/pandoc" -w /pandoc pan
 ## (Adjust to your needs. Order of markdown files in $(SRC) matters!)
 META                    = md/metadata.yaml
 
-SRC                     = md/introduction.md       \
-                          md/relatedwork.md        \
-                          md/concept.md            \
-                          md/realisation.md        \
-                          md/conclusion.md
+SRC                     = md/1_introduction.md       \
+                          md/2_relatedwork.md        \
+                          md/3_concept.md            \
+                          md/4_realisation.md        \
+                          md/5_conclusion.md
 
 BIBFILE                 = references.bib
 
