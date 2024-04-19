@@ -21,7 +21,7 @@ genutzt werden (ggf. muss noch das jeweilige Paket importiert werden).
 **Tipp**: Für eine schnelle Übersicht einfach den Quelltext ansehen (`./md/introduction.md`).
 
 
-## Zitieren
+## Citations
 
 Einfach den Bibtex-Key mit einem `@` davor in eckigen Klammern schreiben: Aus `[@Dietz2018]` wird [@Dietz2018] ...
 Mit Seiten- oder Kapitelangabe: Aus `[@Dietz2018, Seite 111]` oder `[@Dietz2018, Kapitel 111]` wird
