@@ -1,8 +1,8 @@
 ---
 ## mandatory (subtitle and header-left are optional)
-title: "Nefeli thesis"
+title: "Optimization of staged retrofitting planning using Reinforcement Learning"
 #subtitle: "From Markdown to LaTeX to PDF"
-author: "Surname Name"
+author: "Karadedou-Isoua Nefeli"
 keywords: [Markdown, Example]
 
 ### really long titles may require (multiple) line break(s) in page headers when using Eisvogel
@@ -14,10 +14,10 @@ keywords: [Markdown, Example]
 headeralternative: true
 
 studentnumber: "12345678"
-date: "20. Juli 2019"
+date: "20 June 2024"
 
-reviewer1:  "XXX, FH Bielefeld"
-reviewer2:  "XXX, Wuppie GmbH"
+reviewer1:  "Charalampos Andriotis"
+# reviewer2:  "XXX, Wuppie GmbH"
 
 
 ## optional (mandatory, if english abstract enabled)
