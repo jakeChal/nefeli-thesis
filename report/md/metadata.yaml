@@ -21,8 +21,8 @@ reviewer1:  "Charalampos Andriotis"
 
 
 ## optional (mandatory, if english abstract enabled)
-abstract-de: |
-  Dies ist die Zusammenfassung auf Deutsch.
+# abstract-de: |
+#   Dies ist die Zusammenfassung auf Deutsch.
 
 
 ## optional

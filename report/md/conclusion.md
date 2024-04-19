@@ -1,4 +1,4 @@
-# Zusammenfassung
+# Abstract
 
 <!--
 *   Fazit: Vergleich mit der ursprünglichen Zielsetzung (komprimiert/zusammengefasst)
