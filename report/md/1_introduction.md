@@ -13,15 +13,20 @@ Umfang: typisch ca. 8% ... 10% der Arbeit
 
 ## Markdown und Erweiterungen durch Pandoc
 
-Für eine Einführung in (Pandoc-) Markdown vgl. [pandoc.org/MANUAL.html](https://pandoc.org/MANUAL.html).
+In 2020, as part of the European Green Deal, the European Commission initiated the Renovation Wave strategy with the goal of doubling the annual rate of energy renovation for buildings by 2030 (European Commission, 2020). However, there is a delay in how quickly we renovate compared to the standards(Bouckaert et al., 2021). The reasons are mainly economical (Esser et al., 2019) or based on the facts that a lot of homeowners choose to conduct retrofitting because of trigger points, e.g. when a boiler fails (Energy Saving Trust, 2015).
+
+<!-- Für eine Einführung in (Pandoc-) Markdown vgl. [pandoc.org/MANUAL.html](https://pandoc.org/MANUAL.html).
 
 Da als Backend \LaTeX{} zum Einsatz kommt, können alle entsprechenden Befehle und Umgebungen ebenfalls
 genutzt werden (ggf. muss noch das jeweilige Paket importiert werden).
 
-**Tipp**: Für eine schnelle Übersicht einfach den Quelltext ansehen (`./md/introduction.md`).
+**Tipp**: Für eine schnelle Übersicht einfach den Quelltext ansehen (`./md/introduction.md`). -->
 
 
 ## Citations
+
+Citations start with a `@` sign: 
+E.g. this is a wrong citation [@Foobar2000]: The item is not registered in references.bib file...
 
 Einfach den Bibtex-Key mit einem `@` davor in eckigen Klammern schreiben: Aus `[@Dietz2018]` wird [@Dietz2018] ...
 Mit Seiten- oder Kapitelangabe: Aus `[@Dietz2018, Seite 111]` oder `[@Dietz2018, Kapitel 111]` wird

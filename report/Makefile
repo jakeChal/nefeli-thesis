@@ -75,7 +75,7 @@ OPTIONS                += -M link-citations=true
 ## cf. https://pandoc.org/MANUAL.html#citations
 #OPTIONS                += --csl=chicago-author-date-de.csl
 #OPTIONS                += --csl=chicago-note-bibliography.csl
-#OPTIONS                += --csl=ieee.csl
+OPTIONS                += --csl=ieee.csl
 #OPTIONS                += --csl=oxford-university-press-note.csl
 
 OPTIONS                += --listings
