@@ -12,6 +12,16 @@ Step-by-step retrofitting is a process of improving the energy efficiency of a b
 Staged renovations are the most common across Europe, with 85% of renovations in Germany being staged. This approach allows for less disruptive and more cost-efficient renovation measures by aligning them with given ‘trigger points’. [@Fritz2019] Trigger points are circumstances that initiate home improvement projects unrelated to energy savings, providing an opportunity to modernize the energy performance of houses. There are two methods for retrofitting a house: the single-step method, where all measures are implemented simultaneously, and a phased approach, including room-by-room, measure-by-measure, and step-by-step sub-categories. The step-by-step retrofitting strategy highlights the adaptability of building energy retrofitting to align with stakeholders' cost constraints. 
 The step-by-step retrofitting process is a strategic approach to building renovation that considers the timing, cost, and interdependencies of various renovation measures. It aims to maximize energy savings and contribute to the decarbonisation of the building sector[@Maia2021].
 
+
+This is an equation for Nefeli:
+
+$$
+    \label{eq:maxNPV}
+    maxNPV = \sum_{t}^{T} \frac{CF_{t}}{(1+r)^{t}} + \frac{L_{t}}{(1+r)^{tp}}
+$$
+
+
+
 ## Source-Code
 
 ```{.python caption="The preprocessing step, cf. [@Dietz2018]" #lst:huh}
@@ -19,6 +29,8 @@ def foo():
   """ Wuppie! """
   pass
 ```
+
+This will take you to the equation for maxNPV \ref{eq:maxNPV}
 
 ## Mathe
 
