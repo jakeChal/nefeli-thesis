@@ -13,35 +13,26 @@ Staged renovations are the most common across Europe, with 85% of renovations in
 The step-by-step retrofitting process is a strategic approach to building renovation that considers the timing, cost, and interdependencies of various renovation measures. It aims to maximize energy savings and contribute to the decarbonisation of the building sector[@Maia2021].
 
 
-This is an equation for Nefeli:
-
-$$
-    \label{eq:maxNPV}
-    maxNPV = \sum_{t}^{T} \frac{CF_{t}}{(1+r)^{t}} + \frac{L_{t}}{(1+r)^{tp}}
-$$
-
-
-
-## Source-Code
+<!-- ## Source-Code
 
 ```{.python caption="The preprocessing step, cf. [@Dietz2018]" #lst:huh}
 def foo():
   """ Wuppie! """
   pass
-```
+``` -->
 
-This will take you to the equation for maxNPV \ref{eq:maxNPV}
 
-## Mathe
+## Maths
 
-Display-Math geht wie in \LaTeX{} mit einem doppelten Dollarzeichen (entspricht der `equation`-Umgebung):
+This is an equation for Nefeli:
 
-$$
-    \label{eq:wuppie}
-    \nabla E(\mathbf{w}) = \left( \frac{\partial E}{\partial w_{0}}, \frac{\partial E}{\partial w_{1}}, \ldots, \frac{\partial E}{\partial w_{n}} \right)^T
-$$
+$$ \text{maxNPV} = \sum_{t=1}^{T} \frac{CF_{t}}{(1+r)^{t}} + \frac{L_{t}}{(1+r)^{tp}} $$ {#eq:maxNPV}
 
-Inline-Math geht mit einem einfachen Dollar-Zeichen: $\mathbf{w} \gets \mathbf{w} + \Delta\mathbf{w}$ ...
+The solutions of the equation [@eq:maxNPV] are given by:
+
+$$ \dfrac{-b \pm \sqrt{b^2-4ac}}{2a} $$
+
+You can also write inline equations like so: $\mathbf{w} \gets \mathbf{w} + \Delta\mathbf{w}$ ...
 
 
 ## Tabellen
@@ -52,12 +43,13 @@ Inline-Math geht mit einem einfachen Dollar-Zeichen: $\mathbf{w} \gets \mathbf{w
 |          123 | 123         | 123     |    123    |
 |          bar | bar         | bar     |    bar    |
 
-: Tabelle als Markdown-Pipe-Table, vgl. [@Dietz2018] \label{tab:ugh}
+: Table example {#tbl:table1}
 
+As you can see in [@tbl:table1], we do some amazing stuff....
 
 Leider gibt es derzeit einen Bug (siehe [github.com/Wandmalfarbe/pandoc-latex-template/issues/29](https://github.com/Wandmalfarbe/pandoc-latex-template/issues/29)
 bzw. [github.com/jgm/pandoc/issues/3929](https://github.com/jgm/pandoc/issues/3929)), wodurch die Breite beim Einfärben der
-Tabellenzeilen etwas zu breit wird. Wenn das stört, kann man immer noch normale \LaTeX{}-Tabellen nutzen (siehe
+<!-- Tabellenzeilen etwas zu breit wird. Wenn das stört, kann man immer noch normale \LaTeX{}-Tabellen nutzen (siehe
 Tabelle \ref{tab:ieks}).
 
 \begin{longtable}[]{rllc}
@@ -70,7 +62,7 @@ foo & foo & foo & foo \tabularnewline
 123 & 123 & 123 & 123 \tabularnewline
 bar & bar & bar & bar \tabularnewline
 \bottomrule
-\end{longtable}
+\end{longtable} -->
 
 
 ## Querverweise
@@ -79,19 +71,7 @@ Querverweise funktionieren in Markdown leider nicht so richtig wie von \LaTeX{} 
 
 Hier kann aber einfach auf die ensprechenden \LaTeX{}-Pendants ausgewichen werden:
 
-*   Definieren einer Referenz mit `\label{<id>}`{.latex} (beispielsweise in den jeweiligen Unterschriften
-    unter einer Abbildung/Tabelle/Code-Schnipsel), und
-*   Bezugnahme auf eine Referenz im Text mit `\ref{<id>}`{.latex}.
-
-Vgl. Abbildung \ref{fig:foo} oder Tabelle \ref{tab:ugh} oder Listing \ref{lst:huh} ...
-
 Wer mehr braucht, kann sogenannte Filter^[vgl. [pandoc.org/filters.html](https://pandoc.org/filters.html)
 bzw. [pandoc.org/lua-filters.html](https://pandoc.org/lua-filters.html)] einsetzen, beispielsweise
 [github.com/lierdakil/pandoc-crossref](https://github.com/lierdakil/pandoc-crossref).
 
-
-## Hinweise zum generierten PDF
-
-Das generierte PDF ist für den **doppelseitigen** Ausdruck gedacht. Wie bei einem Buch fangen neue Kapitel
-immer auf einer neuen rechten Seite an, d.h. es kann passieren, dass am Ende eines Kapitels ggf. eine leere
-Seite erzeugt wird. Dies ist durchaus beabsichtigt.
