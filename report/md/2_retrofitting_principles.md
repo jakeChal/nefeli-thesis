@@ -1,10 +1,16 @@
 # Retrofitting Principles
 
+## Retrofitting and renovation
+**TODO**  
+The process of building energy retrofitting involves enhancing the energy efficiency and sustainability of existing structures by upgrading systems and features, integrating technology, materials, and practices to minimize energy consumption and reduce greenhouse gas emissions.
 
-## Abbildungen
+## Step by step retrofitting
 
-![Hier steht die Bildunterschrift, Quelle: [@Dietz2018] \label{fig:foo}](figs/wuppie.png){width=80%}
+![Retrofitting components step by step [@Passipedia2019] \label{fig:RetrofitComponents}](figs/retrofittingComponents.png){width=80%}
 
+Step-by-step retrofitting is a process of improving the energy efficiency of a building through a series of planned renovations over time. This approach is particularly useful for buildings that were constructed before energy efficiency standards were widely adopted. The step-by-step retrofitting process has direct implications on the improvement of building stocks’ energy efficiency, and consequently, the achievement of decarbonisation targets set for 2050.(I. Maia et al., 2021)
+Staged renovations are the most common across Europe, with 85% of renovations in Germany being staged. This approach allows for less disruptive and more cost-efficient renovation measures by aligning them with given ‘trigger points’. [@Fritz2019] Trigger points are circumstances that initiate home improvement projects unrelated to energy savings, providing an opportunity to modernize the energy performance of houses. There are two methods for retrofitting a house: the single-step method, where all measures are implemented simultaneously, and a phased approach, including room-by-room, measure-by-measure, and step-by-step sub-categories. The step-by-step retrofitting strategy highlights the adaptability of building energy retrofitting to align with stakeholders' cost constraints. 
+The step-by-step retrofitting process is a strategic approach to building renovation that considers the timing, cost, and interdependencies of various renovation measures. It aims to maximize energy savings and contribute to the decarbonisation of the building sector[@Maia2021].
 
 ## Source-Code
 
