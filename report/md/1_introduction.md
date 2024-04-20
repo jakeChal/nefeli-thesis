@@ -1,120 +1,31 @@
 # Introduction
 
-<!--
-*   Worum geht es hier? Was ist das betrachtete Problem bzw. die Fragestellung der Arbeit?
-*   Darstellung der Bedeutung und Relevanz: Warum sollte die Fragestellung bearbeitet werden?
-*   Einordnung in den Kontext
-*   Abgrenzung: Welche Probleme werden im Rahmen der Arbeit *nicht* gelöst?
-*   Zielsetzung: Möglichst genaue Beschreibung der Ziele der Arbeit, etwa erwarteter Nutzen oder wissenschaftlicher Beitrag
 
-Umfang: typisch ca. 8% ... 10% der Arbeit
--->
+## Background
+In 2020, as part of the European Green Deal, the European Commission initiated the Renovation Wave strategy with the goal of doubling the annual rate of energy renovation for buildings by 2030 [@Commision2020]. However, there is a delay in how quickly we renovate compared to the standards(@Bouckaert2021). The reasons are mainly economical ([@Esser2019]) or based on the facts that a lot of homeowners choose to conduct retrofitting because of trigger points, e.g. when a boiler fails ([@EnergyTrust2015]).
+Planning the house energy renovation in steps can be more economically feasible in some cases ([@Fritz2019]) .
+There has been some research on the correct planning of the retrofitting steps(Maia & Kranzl, 2019)(Maia et al., 2023),[@Maia2021] and the main idea that arises is that the components should be retrofitted in packages (e.g. external wall insulation and window replacement together) or in correct order to avoid the lock-in effect. Lock-in effect can be described as the moment certain energy savings cannot be achieved nor can the situation be changed (due to several variables), this causes the building systems to remain less energy efficient than their potentials for years to come.
+Even more, planning the cost optimal timing of the steps to find the correct sequence and time of actions based on the various variables of the environment (e.g. degradation rate of the materials, economic growth, budget allocation among others) can become a very complex problem. 
+[@Maia2021] proposed to optimize the timings of these retrofitting steps using mixed integer linear programming. They provided an extensive mathematical framework for measuring the net present value of each action.   
+Even though their research is pioneering on the domain, they identified limitations on their model.
+The problem can be seen as a typical maintenance problem where the materials that need retrofitting degrade with some uncertainty of their real degradation rate and each action will have consequences on the actions that can be taken later. These kind of problems have been explained by [@Ogunfowora2023] and found in various fields, from health, to engineering systems to buildings(**citations needed**). These types of problems are called sequential decision-making problems. 
+There are various techniques that can solve sequential problems, including mixed integer linear programming [@Littman1996] but the most upcoming ones come from the realm of reinforcement learning algorithms. Reinforcement learning is a machine learning approach that focuses on finding the optimal policy (optimal action for each scenario we are in now based on what we want to achieve in the future)[@Sutton2018].  For this reason, reinforcement learning will be used as an alternative to produce a roadmap of the staged retrofitting actions. 
+Working with multiple components of a system has been addressed before by [@Andriotis2019],and [@Krachtopoulos2023] among others. However, the studies involving maintenance of buildings is rather limited. [@Ferreira2023] discusses this type of model however doesn’t seem to take into account the building’s  energy demand rising from the components degradation. As such this research involves the development of the building retrofitting planning optimization as a predictive maintenance problem. 
 
-
-## Markdown und Erweiterungen durch Pandoc
-
-In 2020, as part of the European Green Deal, the European Commission initiated the Renovation Wave strategy with the goal of doubling the annual rate of energy renovation for buildings by 2030 (European Commission, 2020). However, there is a delay in how quickly we renovate compared to the standards(Bouckaert et al., 2021). The reasons are mainly economical (Esser et al., 2019) or based on the facts that a lot of homeowners choose to conduct retrofitting because of trigger points, e.g. when a boiler fails (Energy Saving Trust, 2015).
-
-<!-- Für eine Einführung in (Pandoc-) Markdown vgl. [pandoc.org/MANUAL.html](https://pandoc.org/MANUAL.html).
-
-Da als Backend \LaTeX{} zum Einsatz kommt, können alle entsprechenden Befehle und Umgebungen ebenfalls
-genutzt werden (ggf. muss noch das jeweilige Paket importiert werden).
-
-**Tipp**: Für eine schnelle Übersicht einfach den Quelltext ansehen (`./md/introduction.md`). -->
+The following research will be developed into two sections. The first section will consist of framing the basic theories needed to start solving this problem.  The second section will be the implementation of the theory for the development of a code able to calculate the optimal action to be taken in each time step.
+In the first section , the basic retrofitting theories as well as the basic notions of retrofitting in steps will be addressed. The Building performance principles and information about the component degradations will be incorporated as well. 
+The theory and basic principles of Markov Decision Processes and Reinforcement Learning will be explained at the third part of the research, to establish an understanding of the way that the planning optimization will be addressed. 
+In the second section, the implementation will be described. In this part, the different parts of the code will be explained and incorporated both in diagrams and pseudocode.
 
 
-## Citations
-
-Citations start with a `@` sign: 
-E.g. this is a wrong citation [@Foobar2000]: The item is not registered in references.bib file...
-
-Einfach den Bibtex-Key mit einem `@` davor in eckigen Klammern schreiben: Aus `[@Dietz2018]` wird [@Dietz2018] ...
-Mit Seiten- oder Kapitelangabe: Aus `[@Dietz2018, Seite 111]` oder `[@Dietz2018, Kapitel 111]` wird
-[@Dietz2018, Seite 111] oder [@Dietz2018, Kapitel 111] ...
-
-Pandoc (bzw. `pandoc-citeproc`) nutzt per Default den *Chicago Manual of Style*-Stil^[vgl.
-[pandoc.org/MANUAL.html#citations](https://pandoc.org/MANUAL.html#citations)].
-Für andere Zitierstile (etwa numerisch oder als Fußnote) sind auf [zotero.org/styles](https://www.zotero.org/styles)
-die passenden CSL-Dateien zum Download zu finden. Die Aktivierung erfolgt über die Option
-`--csl=XXX.csl` in der Datei `Makefile`.
-
-**Tipp**: Unter [editor.citationstyles.org/searchByName/](https://editor.citationstyles.org/searchByName/)
-können Sie sich die Wirkung der jeweiligen Zitierstile/CSL-Definitionen anschauen.
-
-
-## Abbildungen
-
-![Hier steht die Bildunterschrift, Quelle: [@Dietz2018] \label{fig:foo}](figs/wuppie.png){width=80%}
-
-
-## Source-Code
-
-```{.python caption="The preprocessing step, cf. [@Dietz2018]" #lst:huh}
-def foo():
-  """ Wuppie! """
-  pass
-```
-
-## Mathe
-
-Display-Math geht wie in \LaTeX{} mit einem doppelten Dollarzeichen (entspricht der `equation`-Umgebung):
-
-$$
-    \label{eq:wuppie}
-    \nabla E(\mathbf{w}) = \left( \frac{\partial E}{\partial w_{0}}, \frac{\partial E}{\partial w_{1}}, \ldots, \frac{\partial E}{\partial w_{n}} \right)^T
-$$
-
-Inline-Math geht mit einem einfachen Dollar-Zeichen: $\mathbf{w} \gets \mathbf{w} + \Delta\mathbf{w}$ ...
-
-
-## Tabellen
-
-| Rechtsbündig | Linksbündig | Default | Zentriert |
-|-------------:|:------------|---------|:---------:|
-|          foo | foo         | foo     |    foo    |
-|          123 | 123         | 123     |    123    |
-|          bar | bar         | bar     |    bar    |
-
-: Tabelle als Markdown-Pipe-Table, vgl. [@Dietz2018] \label{tab:ugh}
-
-
-Leider gibt es derzeit einen Bug (siehe [github.com/Wandmalfarbe/pandoc-latex-template/issues/29](https://github.com/Wandmalfarbe/pandoc-latex-template/issues/29)
-bzw. [github.com/jgm/pandoc/issues/3929](https://github.com/jgm/pandoc/issues/3929)), wodurch die Breite beim Einfärben der
-Tabellenzeilen etwas zu breit wird. Wenn das stört, kann man immer noch normale \LaTeX{}-Tabellen nutzen (siehe
-Tabelle \ref{tab:ieks}).
-
-\begin{longtable}[]{rllc}
-\caption{Tabelle als \LaTeX{}-Table \label{tab:ieks}} \\
-\toprule
-Rechtsbündig & Linksbündig & Default & Zentriert \tabularnewline
-\midrule
-\endhead
-foo & foo & foo & foo \tabularnewline
-123 & 123 & 123 & 123 \tabularnewline
-bar & bar & bar & bar \tabularnewline
-\bottomrule
-\end{longtable}
-
-
-## Querverweise
-
-Querverweise funktionieren in Markdown leider nicht so richtig wie von \LaTeX{} gewohnt.
-
-Hier kann aber einfach auf die ensprechenden \LaTeX{}-Pendants ausgewichen werden:
-
-*   Definieren einer Referenz mit `\label{<id>}`{.latex} (beispielsweise in den jeweiligen Unterschriften
-    unter einer Abbildung/Tabelle/Code-Schnipsel), und
-*   Bezugnahme auf eine Referenz im Text mit `\ref{<id>}`{.latex}.
-
-Vgl. Abbildung \ref{fig:foo} oder Tabelle \ref{tab:ugh} oder Listing \ref{lst:huh} ...
-
-Wer mehr braucht, kann sogenannte Filter^[vgl. [pandoc.org/filters.html](https://pandoc.org/filters.html)
-bzw. [pandoc.org/lua-filters.html](https://pandoc.org/lua-filters.html)] einsetzen, beispielsweise
-[github.com/lierdakil/pandoc-crossref](https://github.com/lierdakil/pandoc-crossref).
-
-
-## Hinweise zum generierten PDF
-
-Das generierte PDF ist für den **doppelseitigen** Ausdruck gedacht. Wie bei einem Buch fangen neue Kapitel
-immer auf einer neuen rechten Seite an, d.h. es kann passieren, dass am Ende eines Kapitels ggf. eine leere
-Seite erzeugt wird. Dies ist durchaus beabsichtigt.
+## EU and CO2 emissions and Building Passport initiatives
+The Energy Performance of Buildings Directive (EPBD) is a set of rules created by the European Union (EU) to tackle the challenge of reducing energy usage in buildings and making them more environmentally friendly. Its main goal is to make sure that by the year 2050, all buildings in Europe will use much less energy [@EnergyPerformanceDirective]. This is crucial because currently, buildings in Europe consume  40% of all the energy used in the EU. To address this, the EPBD is part of a bigger set of rules aimed at improving energy efficiency. For example, it works alongside the Energy Efficiency Directive, which promotes various energy-saving measures[@EnergyEfficiencyDirective].
+One of the EPBD's key features is its requirement for regular checks on buildings to see how efficiently they use energy. Shockingly, a staggering 85% of buildings in the EU were constructed before 2000, and out of those, a concerning 75% have poor energy performance. [@EnergyPerformanceDirective] (Thijs Vandenbussche Policy Analyst European Policy Centre, n.d.). Moreover, residential buildings, which make up around 75% of the total building stock, hold enormous potential for energy savings. Despite this, only very minor increases in renovation rates, ranging from 0.6% to 1.6%, are anticipated in the future. This is where the EPBD steps in to accelerate renovation efforts (Thijs Vandenbussche Policy Analyst European Policy Centre, n.d.).
+However, improving energy efficiency in buildings isn't straightforward. It's often costly, and not everyone can afford it. That's why the EU is devising special plans and rules to help. For instance, the revised EPBD is aiming  (among other things) , to increase the rate of building renovations, especially for the worst-performing ones. (Energy Performance of Buildings Directive, n.d.).
+As 80% of the energy used in EU households is focused for heating, cooling, and hot water. , fixing up buildings to use less energy could save a lot of money for people living in them. (Energy Performance of Buildings Directive, n.d.)[@BuildingRenovationPassportsConsumersJourney],
+Despite these efforts, progress in deep energy efficiency renovations remains sluggish. For instance, the International Energy Agency (IEA) estimates that the annual rate of such renovations for existing buildings is less than 1%. (Thijs Vandenbussche Policy Analyst European Policy Centre, n.d.)This underscores the
+importance of tools like building renovation passports, which provide crucial information for homeowners, helping them understand the costs and benefits of renovating their buildings.[@BuildingRenovationPassportsConsumersJourney] [@BuildingRenovationPassportsCustomisedRoadmaps].
+In 2020, as part of the European Green Deal, the European Commission initiated the Renovation Wave strategy with the goal of doubling the annual rate of energy renovation for buildings by 2030 [@Commision2020]. However, there is a delay in how quickly we renovate compared to the standards [@Bouckaert2021]. The reasons are mainly economical [@Esser2019] or based on the facts that a lot of homeowners choose to conduct retrofitting because of trigger points, e.g. when a boiler fails [@EnergyTrust2015].
+One of the ways the directive works is through the development of roadmaps for retrofitting of buildings. The BRP is a tool that provides a long-term, step-by-step renovation roadmap for a specific building, resulting from an energy audit, outlining relevant measures and renovations that could improve the energy performance [@Fritz2019].
+These roadmaps help owners decide on what to retrofit and when. [@Sesana2020] [@Maia2021]. Even more, some of these directives incorporate the possibility of planning the house energy renovation in steps. Retrofitting in steps can be more economically feasible in some cases [@Fritz2019].
+In summary, the EPBD is a vital tool in the EU's efforts to make buildings more energy-efficient and environmentally friendly. By tackling issues like poor energy performance and promoting renovations, it's paving the way for a greener future while also considering the financial well-being of building owners and tenants.  

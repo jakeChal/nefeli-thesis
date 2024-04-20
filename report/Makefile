@@ -21,10 +21,8 @@ PANDOC                 ?= docker run --rm -v "$(WORKDIR):/pandoc" -w /pandoc pan
 META                    = md/metadata.yaml
 
 SRC                     = md/1_introduction.md       \
-                          md/2_relatedwork.md        \
-                          md/3_concept.md            \
-                          md/4_realisation.md        \
-                          md/5_conclusion.md
+                          md/2_retrofitting_principles.md	\
+                          md/10_conclusion.md    
 
 BIBFILE                 = references.bib
 
