@@ -1,107 +1,140 @@
-% Encoding: UTF-8
-@InProceedings{Dietz2018,
-  Title                    = {Teaching Clean Code},
-  Author                   = {Dietz, L. and Manner, J. and Harrer, S. and Lenhard, J.},
-  Booktitle                = {2018 Combined Workshops of the German Software Engineering Conference, SE-WS 2018, 6 March 2018},
-  Year                     = {2018},
-  Organization             = {CEUR-WS},
-  Pages                    = {24--27},
-
-  Url                      = {http://ceur-ws.org/Vol-2066/isee2018paper06.pdf},
-  Urldate                  = {2018-07-23}
+@article{Andriotis2019,
+   abstract = {Decision-making for engineering systems management can be efficiently formulated using Markov Decision Processes (MDPs) or Partially Observable MDPs (POMDPs). Typical MDP/POMDP solution procedures utilize offline knowledge about the environment and provide detailed policies for relatively small systems with tractable state and action spaces. However, in large multi-component systems the dimensions of these spaces easily explode, as system states and actions scale exponentially with the number of components, whereas environment dynamics are difficult to be described explicitly for the entire system and may, often, only be accessible through computationally expensive numerical simulators. In this work, to address these issues, an integrated Deep Reinforcement Learning (DRL) framework is introduced. The Deep Centralized Multi-agent Actor Critic (DCMAC) is developed, an off-policy actor-critic DRL algorithm that directly probes the state/belief space of the underlying MDP/POMDP, providing efficient life-cycle policies for large multi-component systems operating in high-dimensional spaces. Apart from deep network approximators parametrizing complex functions with vast state spaces, DCMAC also adopts a factorized representation of the system actions, thus being able to designate individualized component- and subsystem-level decisions, while maintaining a centralized value function for the entire system. DCMAC compares well against Deep Q-Network and exact solutions, where applicable, and outperforms optimized baseline policies that are based, on time-based, condition-based, and periodic inspection and maintenance considerations.},
+   author = {C. P. Andriotis and K. G. Papakonstantinou},
+   doi = {10.1016/j.ress.2019.04.036},
+   issn = {09518320},
+   journal = {Reliability Engineering and System Safety},
+   keywords = {Deep reinforcement learning,Inspection and maintenance,Large discrete action spaces,Life-cycle cost optimization,Multi-agent stochastic control,Multi-component deteriorating systems,Partially observable MDPs},
+   month = {11},
+   publisher = {Elsevier Ltd},
+   title = {Managing engineering systems with large state and action spaces through deep reinforcement learning},
+   volume = {191},
+   year = {2019},
+}
+@misc{Esser2019,
+   author = {Esser Anne and Dunne Allison and Meeusen Tim and Quaschning Simon and Wegge Denis},
+   title = {Comprehensive study of building energy renovation activities and the uptake of nearly zero-energy buildings in the EU Final report},
+   url = {www.navigant.com},
+   year = {2019},
+}
+@book{Sutton2018,
+   abstract = {Second edition. "Reinforcement learning, one of the most active research areas in artificial intelligence, is a computational approach to learning whereby an agent tries to maximize the total amount of reward it receives while interacting with a complex, uncertain environment. In Reinforcement Learning, Richard Sutton and Andrew Barto provide a clear and simple account of the field's key ideas and algorithms"--Provided by publisher. Introduction. Reinforcement Learning -- Examples -- Elements of Reinforcement Learning -- Limitations and Scope -- An Extended Example: Tic-Tac-Toe -- Summary -- Early History of Reinforcement Learning -- Tabular Solution Methods. Multi-armed Bandits. A k-armed Bandit Problem -- Action-value Methods -- The 10-armed Testbed -- Incremental Implementation -- Tracking a Nonstationary Problem -- Optimistic Initial Values -- Upper-Confidence-Bound Action Selection -- Gradient Bandit Algorithms -- Associative Search (Contextual Bandits) -- Summary -- Finite Markov Decision Processes -- The Agent-Environment Interface -- Goals and Rewards -- Returns and Episodes -- Unified Notation for Episodic and Continuing Tasks -- Policies and Value Functions -- Optimal Policies and Optimal Value Functions -- Optimality and Approximation -- Summary -- Dynamic Programming. Policy Evaluation (Prediction) -- Policy Improvement -- Policy Iteration -- Value Iteration -- Asynchronous Dynamic Programming -- Generalized Policy Iteration -- Efficiency of Dynamic Programming -- Summary -- Monte Carlo Methods. Monte Carlo Prediction -- Monte Carlo Estimation of Action Values -- Monte Carlo Control -- Monte Carlo Control without Exploring Starts -- Off-policy Prediction via Importance Sampling -- Incremental Implementation -- Off-policy Monte Carlo Control -- *Discounting-aware Importance Sampling -- *Per-decision Importance Sampling -- Summary -- Temporal-Difference Learning. TD Prediction -- Advantages of TD Prediction Methods -- Optimality of TD(0) -- Sarsa: On-policy TD Control -- Q-learning: Off-policy TD Control -- Expected Sarsa -- Maximization Bias and Double Learning Games, Afterstates, and Other Special Cases -- Summary -- n-step Bootstrapping. n-step TD Prediction -- n-step Sarsa -- n-step Off-policy Learning -- *Per-decision Methods with Control Variates -- Off-policy Learning Without Importance Sampling: The n-step Tree Backup Algorithm -- *A Unifying Algorithm: n-step Q(u) -- Summary -- Planning and Learning with Tabular Methods. Models and Planning -- Dyna: Integrated Planning, Acting, and Learning -- When the Model Is Wrong -- Prioritized Sweeping -- Expected vs. Sample Updates -- Trajectory Sampling -- Real-time Dynamic Programming -- Planning at Decision Time -- Heuristic Search -- Rollout Algorithms -- Monte Carlo Tree Search -- Summary of the Chapter -- Summary of Part I: Dimensions -- Approximate Solution Methods. On-policy Prediction with Approximation. Value-function Approximation -- The Prediction Objective (VE) Stochastic-gradient and Semi-gradient Methods -- Linear Methods -- Feature Construction for Linear Methods -- Polynomials -- Fourier Basis -- Coarse Coding -- Tile Coding -- Radial Basis Functions -- Selecting Step-Size Parameters Manually -- Nonlinear Function Approximation: Artificial Neural Networks -- Least-Squares TD -- Memory-based Function Approximation -- Kernel-based Function Approximation -- Looking Deeper at On-policy Learning: Interest and Emphasis -- Summary -- On-policy Control with Approximation. Episodic Semi-gradient Control -- Semi-gradient n-step Sarsa -- Average Reward: A New Problem Setting for Continuing Tasks -- Deprecating the Discounted Setting -- Differential Semi-gradient n-step Sarsa -- Summary -- *Off-policy Methods with Approximation. Semi-gradient Methods -- Examples of Off-policy Divergence The Deadly Triad -- Linear Value-function Geometry -- Gradient Descent in the Bellman Error -- The Bellman Error is Not Learnable -- Gradient-TD Methods -- Emphatic-TD Methods -- Reducing Variance -- Summary -- Eligibility Traces. The A-return -- TD(A) -- n-step Truncated A-return Methods -- Redoing Updates: Online A-return Algorithm -- True Online TD(A) -- *Dutch Traces in Monte Carlo Learning -- Sarsa(A) -- Variable A and ry -- Off-policy Traces with Control Variates -- Watkins's Q(A) to Tree-Backup(A) -- Stable Off-policy Methods with Traces -- Implementation Issues -- Conclusions -- Policy Gradient Methods. Policy Approximation and its Advantages -- The Policy Gradient Theorem -- REINFORCE: Monte Carlo Policy Gradient -- REINFORCE with Baseline -- Actor-Critic Methods Policy Gradient for Continuing Problems -- Policy Parameterization for Continuous Actions -- Summary -- Looking Deeper. Psychology. Prediction and Control -- Classical Conditioning -- Blocking and Higher-order Conditioning -- The Rescorla-Wagner Model -- The TD Model -- TD Model Simulations -- Instrumental Conditioning -- Delayed Reinforcement -- Cognitive Maps -- Habitual and Goal-directed Behavior -- Summary -- Neuroscience -- Neuroscience Basics -- Reward Signals, Reinforcement Signals, Values, and Prediction Errors -- The Reward Prediction Error Hypothesis -- Dopamine -- Experimental Support for the Reward Prediction Error Hypothesis -- TD Error/Dopamine Correspondence -- Neural Actor-Critic -- Actor and Critic Learning Rules -- Hedonistic Neurons -- Collective Reinforcement Learning -- Model-based Methods in the Brain Addiction -- Summary -- Applications and Case Studies. TD-Gammon -- Samuel's Checkers Player -- Watson's Daily-Double Wagering -- Optimizing Memory Control -- Human-level Video Game Play -- Mastering the Game of Go -- AlphaGo -- AlphaGo Zero -- Personalized Web Services -- Thermal Soaring -- Frontiers. General Value Functions and Auxiliary Tasks -- Temporal Abstraction via Options -- Observations and State -- Designing Reward Signals -- Remaining Issues -- Experimental Support for the Reward Prediction Error Hypothesis.},
+   author = {Richard S. Sutton and Andrew G. Barto},
+   isbn = {9780262039246},
+   pages = {47-68},
+   title = {Reinforcement learning : an introduction},
+   year = {2018},
+}
+@article{Konstantinou2014,
+   author = {Thaleia Konstantinou},
+   title = {Façade Refurbishment Toolbox Supporting the Design of Residential Energy Upgrades},
+   year = {2014},
+}
+@inproceedings{Fritz2019,
+   abstract = {The 2018 revision of the EU Energy Performance of Buildings Directive (EPBD) sets a clear direction for the full decarboni-sation of the European building stock by 2050, and calls for policies and actions to stimulate cost-effective deep renovation of buildings. While one-step renovations have the advantage of integral planning and construction work without component connections and lock-in problems, staged renovations allow for less disruptive and more cost-efficient renovation measures by aligning them with given 'trigger points'. These are occasions either prompted by practical opportunities (e.g. need for repairs or building an extension), personal circumstances (e.g. a newborn in the family, retiring or children moving out), or change of ownership. Staged renovations are by far the most common across Eu-rope (e.g. 85 % of renovations in Germany). This paper analyses how well-planned staged renovations can lead to a highly efficient building based on model calculations for typical German residential building. The model calculation shows that while the one-step renovation leads to 20 % higher energy savings over time for a 1990s multi-family building, the total cost is around 6 % lower in the stepwise renovation due to coupling the renovation measures to the maintenance and repair work required. The paper concludes that one-step and staged renovations are not in competition with each other, but are both suitable solutions depending on the specific situation. It is crucial, however , that appropriate (national) renovation strategies ensure that staged renovations are deep. For this purpose, the paper draws on material compiled in the European Horizon2020 funded iBRoad project, which focuses on the development, testing and implementation of the building renovation passport (BRP). The BRP has been presented on the 2011 eceee summer study and since then been developed, implemented in several countries and referenced by the revised EPBD. The paper will describe the implementation options and experience gained so far.},
+   author = {Sara Fritz and Martin Pehnt and Peter Mellwig and Jonathan Volt},
+   journal = {ECEEE 2019 SUMMER STUDY},
+   pages = {1279-1288},
+   title = {Planned staged deep renovations as the main driver for a decarbonised European building stock},
+   year = {2019},
+}
+@article{Bouckaert2021,
+   author = {Stéphanie Bouckaert and Araceli Fernandez Pales and Christophe McGlade and Uwe Remme and Brent Wanner and Laszlo Varro and Davide D'Ambrosio and Thomas Spencer},
+   keywords = {Air quality management,Energy consumption,Forecasting,Pollutants,Strategic planning},
+   title = {Net Zero by 2050: A Roadmap for the Global Energy Sector},
+   year = {2021},
+}
+@misc{Commision2020,
+   author = {European Commision},
+   journal = {Press release},
+   title = {Renovation Wave: doubling the renovation rate to cut emissions, boost recovery and reduce energy poverty},
+   url = {https://ec.europa.eu/commission/presscorner/detail/en/ip_20_1835},
+   year = {2020},
+}
+@article{EnergyTrust2015,
+   author = {Energy Saving Trust},
+   title = {Trigger points: a convenient truth Promoting energy efficiency in the home},
+   url = {https://www.yumpu.com/en/document/view/44329336/trigger-points-energy-saving-trust},
+   year = {2015},
+}
+@article{Maia2021,
+   abstract = {The EPBD 2018/844/EU introduced new instruments: the national long-term strategies and the building renovation passports. One aspect of the building renovation passports is the step-by-step renovation roadmap, a long-term plan that mainly indicates the building's stepwise energy performance decrease. Other non-energy related indicators as investment costs and co-benefits (thermal comfort and indoor air quality) are also included. This paper aims to analyze the individual building roadmaps developed during the EU-funded iBRoad project. Furthermore, to verify their compliance with the national long-term renovation strategies (LTRS). Because many countries still do not have submitted their LTRS yet, the present paper proposes seven indicators to assess the roadmaps. However, none of the buildings fulfilled all indicators. 4 buildings in Portugal and 1 in Bulgaria complained more than 80% of the requirements. The results show that there is still a need for financing schemes and policy design that considers the step-by-step approach's singularities. Key Innovations • Energy demand calculation and the step-by-step renovation approach • Step-by-step individual buildings roadmaps tools • The link between building retrofitting activities and building stock decarbonization Practical Implications This paper aims to contribute to the acceleration of renovation activities in the European building stock. This goal can be achieved by improving policy and financing design schemes closer to real-life renovation practices.},
+   author = {Iná Maia and Lukas Kranzl},
+   doi = {10.26868/25222708.2021.30347},
+   title = {Analysis of step-by-step individual buildings roadmaps-what can we learn about the practice? 2 3},
+   url = {https://doi.org/10.26868/25222708.2021.30347},
+}
+@article{Ogunfowora2023,
+   abstract = {Systems and machines undergo various failure modes that result in machine health degradation, so maintenance actions are required to restore them back to a state where they can perform their expected functions. Since maintenance tasks are inevitable, maintenance planning is essential to ensure the smooth operations of the production system and other industries at large. Maintenance planning is a decision-making problem that aims at developing optimum maintenance policies and plans that help reduces maintenance costs, extend asset life, maximize their availability, and ultimately ensure workplace safety. Reinforcement learning is a data-driven decision-making algorithm that has been increasingly applied to develop dynamic maintenance plans while leveraging the continuous information from condition monitoring of the system and machine states. By leveraging the condition monitoring data of systems and machines with reinforcement learning, smart maintenance planners can be developed, which is a precursor to achieving a smart factory. This paper presents a literature review on the applications of reinforcement and deep reinforcement learning for maintenance planning and optimization problems. To capture the common ideas without losing touch with the uniqueness of each publication, taxonomies used to categorize the systems were developed, and reviewed publications were highlighted, classified, and summarized based on these taxonomies. Adopted methodologies, findings, and well-defined interpretations of the reviewed studies were summarized in graphical and tabular representations to maximize the utility of the work for both researchers and practitioners. This work also highlights the research gaps, key insights from the literature, and areas for future work.},
+   author = {Oluwaseyi Ogunfowora and Homayoun Najjaran},
+   doi = {10.1016/j.jmsy.2023.07.014},
+   journal = {Journal of Manufacturing Systems},
+   keywords = {Deep reinforcement learning,Maintenance optimization,Maintenance planning,Maintenance scheduling,Preventive maintenance,Reinforcement learning},
+   pages = {244-263},
+   title = {Reinforcement and deep reinforcement learning-based solutions for machine maintenance planning, scheduling policies, and optimization},
+   volume = {70},
+   url = {https://doi.org/10.1016/j.jmsy.2023.07.014},
+   year = {2023},
+}
+@article{Littman1996,
+   author = {Michael L Littman},
+   city = {Providence, Rhode Island},
+   institution = {Brown University},
+   month = {3},
+   title = {Algorithms for Sequential Decision Making},
+   url = {https://www.researchgate.net/publication/33697270},
+   year = {1996},
 }
 
-@InProceedings{Meiners2016,
-  Title                    = {Topic Tracking in News Streams using Latent Factor Models},
-  Author                   = {J. Meiners and A. Lommatzsch},
-  Booktitle                = {Proceedings of the 16th International Conference on Innovations for Community Services},
-  Year                     = {2016},
-  Publisher                = {Springer},
-
-  Location                 = {Vienna, Austria},
-  Numpages                 = {18},
+@article{Krachtopoulos2023,
+   author = {Konstantinos Krachtopoulos},
+   title = {Multi-objective Deep Reinforcement Learning for predictive maintenance of road networks},
+   year = {2023},
+}
+@inbook{Ferreira2023,
+   abstract = {The maintenance model described in Chap. 3 is applied to analyse individually nine constructive solutions (six façade claddings: ceramic tiling systems (CTS), natural stone claddings (NSC), rendered façades (RF), painted surfaces (PS), external thermal insulation composite systems (ETICS), architectural concrete façades (ACF); two window frames types: aluminium window frames (AWF), wooden window frames (WWF); and one roof cladding solution: ceramic claddings in pitched roofs (CCPR)). For each constructive solution, three maintenance strategies are addressed, ranging from a maintenance strategy where preventive maintenance is not applied (most common maintenance strategy nowadays) to a maintenance strategy with a higher level of preventive maintenance (including cleaning operations and minor interventions). The results are assessed through four parameters: service life and durability, efficiency index, life cycle costs, and number of total replacements.},
+   author = {Cláudia Ferreira and Ana Silva and Jorge de Brito and Inês Flores-Colen},
+   doi = {10.1007/978-3-031-14767-8_4},
+   issn = {2196999X},
+   journal = {Springer Series in Reliability Engineering},
+   pages = {63-115},
+   publisher = {Springer Science and Business Media Deutschland GmbH},
+   title = {Maintainability of Buildings' Envelope},
+   year = {2023},
 }
 
-@Article{Silver2016,
-  Title                    = {Mastering the game of Go with deep neural networks and tree search},
-  Author                   = {Silver, D. and Huang, A. and Maddison, C. and Guez, A. and Sifre, L. and Van Den Driessche, G. and Schrittwieser, J. Schrittwieser, I. and Panneershelvam, V. and Lanctot, M. and others},
-  Journal                  = {Nature},
-  Year                     = {2016},
-  Publisher                = {Nature Publishing Group},
-  Volume                   = {529},
-  Number                   = {7587},
-  Pages                    = {484},
-
-  Doi                      = {10.1038/nature16961},
-  Url                      = {https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf},
-  Urldate                  = {2018-07-24},
+@misc{EnergyEfficiencyDirective,
+   title = {Energy Efficiency Directive},
+   url = {https://energy.ec.europa.eu/topics/energy-efficiency/energy-efficiency-targets-directive-and-rules/energy-efficiency-directive_en},
 }
 
-@Book{Balzert2017,
-  Title                    = {Wissenschaftliches Arbeiten},
-  Author                   = {H. Balzert and M. Schröder and C. Schäfer},
-  Year                     = {2017},
-  Publisher                = {Springer Campus},
-
-  ISBN                     = {978-3-96149-006-6},
+@misc{BuildingRenovationPassportsConsumersJourney,
+   title = {Building Renovation Passports: consumer's journey to a better home | BUILD UP},
+   url = {https://build-up.ec.europa.eu/en/resources-and-tools/publications/building-renovation-passports-consumers-journey-better-home},
 }
-@Book{Block2011,
-  Title                    = {Haskell Intensivkurs},
-  Author                   = {M. Block and A. Neumann},
-  Year                     = {2011},
-  Publisher                = {Springer},
-
-  Doi                      = {10.1007/978-3-642-04718-3},
-  ISBN                     = {978-3-642-04718-3},
+@misc{BuildingRenovationPassportsCustomisedRoadmaps,
+   title = {Building Renovation Passports - Customised roadmaps towards deep renovation and better homes > BPIE - Buildings Performance Institute Europe},
+   url = {https://www.bpie.eu/publication/renovation-passports/},
 }
-
-@Book{Ball2018a,
-  Title                    = {Writing An Interpreter In Go},
-  Author                   = {T. Ball},
-  Year                     = {2018},
-  Publisher                = {Thorsten Ball},
-
-  ISBN                     = {978-3-9820-1611-5},
-  Url                      = {https://interpreterbook.com},
-  Urldate                  = {2018-8-15}
+@article{Sesana2020,
+   abstract = {Since 2002, the Energy Performance of Buildings Directive (EPBD) has set up the path to improve the efficiency gains in the EU building sector, including measures that should accelerate the rate of building renovation towards more energy efficient systems. Under the 2010 EPBD, all EU countries have established independent energy performance certification systems supported by independent mechanisms of control and verification. The EU directive 2018/844 has introduced different novelties and one of these regards the possibility for the Member States, together with the Long-Term Renovation Strategies (LTRS), to introduce an optional Building Renovation Passport Article 2a.1(c), considered as an empowering document that gives more reliable and independent information on the potential for energy savings that is tied up in their buildings. On 14 October 2020, the European Commission launched its Communication and Strategy on the Renovation Wave initiative, intending to double the current Europe’s renovation rate to make the continent carbon neutral by 2050. However, current practices and tools of energy performance assessment and certification applied across Europe face several challenges. In this context, the ALDREN project is a methodological framework that aims to support decision-making and investment in deep energy renovation of nonresidential buildings, based on a set of procedures (modules) that consist in the step-by-step implementation of protocols to assess the energy performance, indoor environmental quality, and financial value of buildings, before and after the energy renovation. The paper presents the ALDREN overall procedure with a focus on the development of the Building Renovation Passport and its application to an Italian office building.},
+   author = {Marta Maria Sesana and Graziano Salvalai and Diletta Brutti and Corinne Mandin and Wenjuan Wei},
+   doi = {10.3390/BUILDINGS11010003},
+   issn = {2075-5309},
+   issue = {1},
+   journal = {Buildings 2021, Vol. 11, Page 3},
+   keywords = {Building Renovation Passport,building logbook,energy renovation,modular structure,non,renovation roadmap,residential buildings},
+   month = {12},
+   pages = {3},
+   publisher = {Multidisciplinary Digital Publishing Institute},
+   title = {ALDREN: A Methodological Framework to Support Decision-Making and Investments in Deep Energy Renovation of Non-Residential Buildings},
+   volume = {11},
+   url = {https://www.mdpi.com/2075-5309/11/1/3/htm https://www.mdpi.com/2075-5309/11/1/3},
+   year = {2020},
 }
-
-@Book{Ball2018b,
-  Title                    = {Writing A Compiler In Go},
-  Author                   = {T. Ball},
-  Year                     = {2018},
-  Publisher                = {Thorsten Ball},
-
-  ISBN                     = {978-3-9820-1610-8},
-  Url                      = {https://compilerbook.com/},
-  Urldate                  = {2018-8-15}
+@misc{Passipedia2019,
+   author = {Jan Steiger and Eva Vahalova},
+   title = {Overall retrofit plan for step-by-step retrofits to EnerPHit Standard [Passipedia EN]},
+   url = {https://passipedia.org/planning/refurbishment_with_passive_house_components/overall_retrofit_plan_for_step-by-step_retrofits_to_enerphit_standard#sequential_retrofitting_of_components},
+   year = {2019},
 }
-
-@Online{Slagell2014,
-  Title                    = {Ruby User's Guide},
-  Author                   = {Slagell, M.},
-  Year                     = {2014},
-
-  Url                      = {http://www.rubyist.net/~slagell/ruby/index.html},
-  Urldate                  = {2018-08-14},
-}
-
-@Online{Alhour2018,
-  Title                    = {Awesome Compilers},
-  Author                   = {A. Alhour},
-  Year                     = {2018},
-
-  Url                      = {https://github.com/aalhour/awesome-compilers},
-  Urldate                  = {2018-08-21}
-}
-
-@Online{Nystrom2018,
-  Title                    = {Crafting Interpreters},
-  Author                   = {R. Nystrom},
-  Year                     = {2018},
-
-  Url                      = {https://github.com/munificent/craftinginterpreters},
-  Urldate                  = {2018-08-21},
-}
-
-@Comment{jabref-meta: databaseType:bibtex;}

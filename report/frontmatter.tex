@@ -9,18 +9,18 @@ $endif$
 
 
 %------------------------------------- Custom Abstract Page ------------------------
-$if(abstract-de)$
+$if(abstract-en)$
 \cleardoublepage
 \begin{minipage}{\linewidth}
 
-\chapter*{Zusammenfassung}
-%\addcontentsline{toc}{chapter}{Zusammenfassung}
-$abstract-de$
-
-$if(abstract-en)$
 \chapter*{Abstract}
 %\addcontentsline{toc}{chapter}{Abstract}
 $abstract-en$
+
+$if(abstract-de)$
+\chapter*{Zusammenfassung}
+%\addcontentsline{toc}{chapter}{Zusammenfassung}
+$abstract-de$
 $endif$
 
 \end{minipage}
@@ -32,8 +32,8 @@ $endif$
 
 %------------------------------------- Acknowledgements Page -----------------------
 $if(acknowledgements)$
-\chapter*{Danksagung}
-%\addcontentsline{toc}{chapter}{Danksagung}
+\chapter*{Acknowledgements}
+%\addcontentsline{toc}{chapter}{Acknowledgements}
 $acknowledgements$
 $endif$
 %------------------------------------- Acknowledgements Page -----------------------

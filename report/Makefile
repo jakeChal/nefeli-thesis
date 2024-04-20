@@ -13,18 +13,16 @@ WORKDIR                 = $(CURDIR)
 ## (Defaults to docker. To use pandoc and TeX-Live directly, create an
 ## environment variable `PANDOC` pointing to the location of your
 ## pandoc installation.)
-PANDOC                 ?= docker run --rm -v "$(WORKDIR):/pandoc" -w /pandoc pandoc-thesis pandoc
+PANDOC                 ?= docker run --rm -v "$(WORKDIR):/pandoc" -w /pandoc pandoc-thesis-v2 pandoc
 
 
 ## Source files
 ## (Adjust to your needs. Order of markdown files in $(SRC) matters!)
 META                    = md/metadata.yaml
 
-SRC                     = md/introduction.md       \
-                          md/relatedwork.md        \
-                          md/concept.md            \
-                          md/realisation.md        \
-                          md/conclusion.md
+SRC                     = md/1_introduction.md       \
+                          md/2_retrofitting_principles.md	\
+                        #   md/10_conclusion.md    
 
 BIBFILE                 = references.bib
 
@@ -61,13 +59,14 @@ OPTIONS                 = -f markdown
 OPTIONS                += --pdf-engine=pdflatex
 OPTIONS                += --standalone
 
-OPTIONS                += -M lang=de-DE
+OPTIONS                += -M lang=en-US
 OPTIONS                += --metadata-file=$(META)
 
 OPTIONS                += --include-in-header=$(TMP1)
 OPTIONS                += --include-before-body=$(TMP2)
 OPTIONS                += --include-after-body=$(TMP3)
 
+OPTIONS                += --filter pandoc-crossref 
 OPTIONS                += --citeproc
 OPTIONS                += -M bibliography=$(BIBFILE)
 OPTIONS                += -M link-citations=true
@@ -75,7 +74,8 @@ OPTIONS                += -M link-citations=true
 ## cf. https://pandoc.org/MANUAL.html#citations
 #OPTIONS                += --csl=chicago-author-date-de.csl
 #OPTIONS                += --csl=chicago-note-bibliography.csl
-#OPTIONS                += --csl=ieee.csl
+OPTIONS                += --csl=apa.csl
+# OPTIONS                += --csl=ieee.csl
 #OPTIONS                += --csl=oxford-university-press-note.csl
 
 OPTIONS                += --listings
